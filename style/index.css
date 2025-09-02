@@ -1,0 +1,207 @@
+/* استایل پایه و ریست پیش فرض */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Vazir, sans-serif;
+            }
+
+            body {
+                background-color: #1a1a2e;
+                color: #e6e6e6;
+                height: 100vh;
+                overflow-x: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            /* کانتینر اصلی */
+            .container {
+                position: relative;
+                width: 100%;
+                max-width: 1200px;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 20px;
+            }
+
+            /* پس زمینه با گرادینت */
+            .background-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(
+                    135deg,
+                    #1a1a2e 0%,
+                    #16213e 50%,
+                    #0f3460 100%
+                );
+                z-index: -2;
+            }
+
+            /* افکت نقطه‌ای روی پس‌زمینه */
+            .background-dots {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: radial-gradient(
+                    rgba(255, 255, 255, 0.1) 1px,
+                    transparent 1px
+                );
+                background-size: 20px 20px;
+                z-index: -1;
+            }
+
+            /* محتوای اصلی */
+            .content {
+                max-width: 800px;
+                z-index: 1;
+                animation: fadeIn 1.5s ease-in-out;
+                padding: 40px;
+                background: rgba(13, 17, 33, 0.7);
+                border-radius: 20px;
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(10px);
+            }
+
+            .logo {
+                margin-bottom: 40px;
+            }
+
+            .logo h1 {
+                font-size: 3.2rem;
+                margin-bottom: 15px;
+                background: linear-gradient(45deg, #4facfe, #00f2fe);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                text-shadow: 0 2px 15px rgba(0, 242, 254, 0.3);
+                font-weight: 700;
+            }
+
+            .logo p {
+                font-size: 1.3rem;
+                color: #b0b0b0;
+                margin-top: 15px;
+                line-height: 1.6;
+            }
+
+            /* دکمه‌ها */
+            .buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                margin-top: 50px;
+                width: 100%;
+                max-width: 450px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .btn {
+                padding: 18px 35px;
+                font-size: 1.3rem;
+                border: none;
+                border-radius: 12px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                font-weight: 600;
+                position: relative;
+                overflow: hidden;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .btn-primary {
+                background: linear-gradient(45deg, #4facfe, #00f2fe);
+                color: #0d1121;
+            }
+
+            .btn-secondary {
+                background: linear-gradient(45deg, #ff758c, #ff7eb3);
+                color: #fff;
+            }
+
+            .btn:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+            }
+
+            .btn:active {
+                transform: translateY(0);
+            }
+
+            /* آیکون دکمه‌ها */
+            .btn-icon {
+                font-size: 1.5rem;
+            }
+
+            /* افکت‌های hover برای دکمه‌ها */
+            .btn::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(255, 255, 255, 0.1);
+                transform: translateX(-100%);
+                transition: transform 0.4s ease;
+            }
+
+            .btn:hover::after {
+                transform: translateX(0);
+            }
+
+            /* پانویس */
+            footer {
+                position: absolute;
+                bottom: 30px;
+                color: #666;
+                font-size: 0.9rem;
+                text-align: center;
+            }
+
+            /* انیمیشن‌ها */
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* رسپانسیو برای موبایل */
+            @media (max-width: 768px) {
+                .logo h1 {
+                    font-size: 2.5rem;
+                }
+
+                .logo p {
+                    font-size: 1.1rem;
+                }
+
+                .content {
+                    padding: 30px 20px;
+                }
+
+                .btn {
+                    padding: 16px 25px;
+                    font-size: 1.1rem;
+                }
+            }
