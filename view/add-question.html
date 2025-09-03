@@ -1,327 +1,312 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>بانک سوال - افزودن سوال جدید</title>
-		<!-- لینک فونت وزیر -->
-		<link href="https://v1.fontapi.ir/css/Vazir" rel="stylesheet" />
-		<!-- آیکون‌های فونت آوسام -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-		/>
-		<link rel="stylesheet" href="../style/add-question.css" />
-	</head>
-	<body>
-		<div class="container">
-			<div class="header">
-				<button
-					class="back-btn"
-					onclick="window.location.href='index.html'"
-				>
-					<i class="fas fa-arrow-right"></i>
-					بازگشت
-				</button>
-				<h1 class="page-title">افزودن سوال جدید</h1>
-				<div></div>
-				<!-- برای فضای خالی در سمت چپ -->
-			</div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>بانک سوال - افزودن سوال جدید</title>
+        <!-- لینک فونت وزیر -->
+        <link href="https://v1.fontapi.ir/css/Vazir" rel="stylesheet" />
+        <!-- آیکون‌های فونت آوسام -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <link rel="stylesheet" href="../style/add-question.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <button
+                    class="back-btn"
+                    onclick="window.location.href='index.html'">
+                    <i class="fas fa-arrow-right"></i>
+                    بازگشت
+                </button>
+                <h1 class="page-title">افزودن سوال جدید</h1>
+                <div></div>
+                <!-- برای فضای خالی در سمت چپ -->
+            </div>
 
-			<!-- کارت نوع سوال (تب‌ها) -->
-			<div class="card">
-				<h2 class="card-title">نوع سوال</h2>
+            <!-- کارت نوع سوال (تب‌ها) -->
+            <div class="card">
+                <h2 class="card-title">نوع سوال</h2>
 
-				<div class="tabs">
-					<button class="tab-btn active" data-tab="multiple-choice">
-						چندگزینه‌ای
-					</button>
-					<button class="tab-btn" data-tab="descriptive">
-						تشریحی
-					</button>
-					<button class="tab-btn" data-tab="true-false">
-						صحیح/غلط
-					</button>
-					<button class="tab-btn" data-tab="blank">
-						پر کردن جای خالی
-					</button>
-					<button class="tab-btn" data-tab="reading">
-						درک مطلب (ریدینگ)
-					</button>
-					<button class="tab-btn" data-tab="matching">
-						وصل کردنی
-					</button>
-				</div>
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="multiple-choice">
+                        چندگزینه‌ای
+                    </button>
+                    <button class="tab-btn" data-tab="descriptive">
+                        تشریحی
+                    </button>
+                    <button class="tab-btn" data-tab="true-false">
+                        صحیح/غلط
+                    </button>
+                    <button class="tab-btn" data-tab="blank">
+                        پر کردن جای خالی
+                    </button>
+                    <button class="tab-btn" data-tab="reading">
+                        درک مطلب (ریدینگ)
+                    </button>
+                    <button class="tab-btn" data-tab="matching">
+                        وصل کردنی
+                    </button>
+                </div>
 
-				<!-- محتوای تب چندگزینه‌ای -->
-				<div id="multiple-choice" class="tab-content active">
-					<h3>سوال چندگزینه‌ای</h3>
+                <!-- محتوای تب چندگزینه‌ای -->
+                <form id="multiple-choice" class="tab-content active">
+                    <h3>سوال چندگزینه‌ای</h3>
 
-					<div class="form-group">
-						<label class="form-label">صورت سوال (فارسی)</label>
-						<div class="input-group-with-icon">
-							<textarea
-								id="question-title"
-								class="form-control question-text-fa"
-								placeholder="صورت سوال به فارسی را اینجا وارد کنید"
-							></textarea>
-							<button class="paste-icon-button">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="20"
-									height="20"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								>
-									<path
-										d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
-									></path>
-									<rect
-										x="8"
-										y="2"
-										width="8"
-										height="4"
-										rx="1"
-										ry="1"
-									></rect>
-								</svg>
-							</button>
-						</div>
-					</div>
+                    <div class="form-group">
+                        <label class="form-label">صورت سوال (فارسی)</label>
+                        <div class="input-group-with-icon">
+                            <textarea
+                                id="question-title"
+                                class="form-control question-text-fa">
+گزینه صحیح را انتخاب کنید.
+                            </textarea>
+                            <button class="paste-icon-button">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                                    <rect
+                                        x="8"
+                                        y="2"
+                                        width="8"
+                                        height="4"
+                                        rx="1"
+                                        ry="1"></rect>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
 
-					<div class="form-group">
-						<label class="form-label">متن سوال (انگلیسی)</label>
-						<div class="input-group-with-icon">
-							<textarea
-								id="question-text"
-								class="form-control question-text-en"
-								placeholder="Question text in English"
-							></textarea>
-							<button
-								class="paste-icon-button paste-icon-button-en"
-							>
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="20"
-									height="20"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								>
-									<path
-										d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
-									></path>
-									<rect
-										x="8"
-										y="2"
-										width="8"
-										height="4"
-										rx="1"
-										ry="1"
-									></rect>
-								</svg>
-							</button>
-						</div>
-					</div>
+                    <div class="form-group">
+                        <label class="form-label">متن سوال (انگلیسی)</label>
+                        <div class="input-group-with-icon">
+                            <textarea
+                                id="question-text"
+                                class="form-control question-text-en"
+                                placeholder="Question text in English"></textarea>
+                            <button
+                                class="paste-icon-button paste-icon-button-en">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                                    <rect
+                                        x="8"
+                                        y="2"
+                                        width="8"
+                                        height="4"
+                                        rx="1"
+                                        ry="1"></rect>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
 
-					<div class="form-group">
-						<label class="form-label">گزینه‌ها</label>
-						<div id="options-container" dir="ltr">
-							<!-- گزینه‌ها به صورت داینامیک اضافه می‌شوند -->
-						</div>
+                    <div class="form-group">
+                        <label class="form-label">گزینه‌ها</label>
+                        <div id="options-container" dir="ltr">
+                            <!-- گزینه‌ها به صورت داینامیک اضافه می‌شوند -->
+                        </div>
 
-						<button
-							type="button"
-							class="add-option-btn"
-							id="add-option"
-						>
-							<i class="fas fa-plus"></i>
-							افزودن گزینه
-						</button>
-					</div>
-				</div>
+                        <button
+                            type="button"
+                            class="add-option-btn"
+                            id="add-option">
+                            <i class="fas fa-plus"></i>
+                            افزودن گزینه
+                        </button>
+                    </div>
+                </form>
 
-				<!-- محتوای تب تشریحی -->
-				<div id="descriptive" class="tab-content">
-					<h3>سوال تشریحی</h3>
-					<p>این بخش برای سوالات تشریحی خواهد بود.</p>
-					<!-- محتوای سوالات تشریحی اینجا قرار می‌گیرد -->
-				</div>
+                <!-- محتوای تب تشریحی -->
+                <div id="descriptive" class="tab-content">
+                    <h3>سوال تشریحی</h3>
+                    <p>این بخش برای سوالات تشریحی خواهد بود.</p>
+                    <!-- محتوای سوالات تشریحی اینجا قرار می‌گیرد -->
+                </div>
 
-				<!-- محتوای تب صحیح/غلط -->
-				<div id="true-false" class="tab-content">
-					<h3>سوال صحیح/غلط</h3>
-					<p>این بخش برای سوالات صحیح/غلط خواهد بود.</p>
-					<!-- محتوای سوالات صحیح/غلط اینجا قرار می‌گیرد -->
-				</div>
+                <!-- محتوای تب صحیح/غلط -->
+                <div id="true-false" class="tab-content">
+                    <h3>سوال صحیح/غلط</h3>
+                    <p>این بخش برای سوالات صحیح/غلط خواهد بود.</p>
+                    <!-- محتوای سوالات صحیح/غلط اینجا قرار می‌گیرد -->
+                </div>
 
-				<!-- محتوای تب پر کردن جای خالی -->
-				<div id="blank" class="tab-content">
-					<h3>پر کردن جای خالی</h3>
-					<p>این بخش برای سوالات پر کردن جای خالی خواهد بود.</p>
-					<!-- محتوای سوالات پر کردن جای خالی اینجا قرار می‌گیرد -->
-				</div>
+                <!-- محتوای تب پر کردن جای خالی -->
+                <div id="blank" class="tab-content">
+                    <h3>پر کردن جای خالی</h3>
+                    <p>این بخش برای سوالات پر کردن جای خالی خواهد بود.</p>
+                    <!-- محتوای سوالات پر کردن جای خالی اینجا قرار می‌گیرد -->
+                </div>
 
-				<!-- محتوای تب درک مطلب -->
-				<div id="reading" class="tab-content">
-					<h3>درک مطلب (ریدینگ)</h3>
-					<p>این بخش برای سوالات درک مطلب خواهد بود.</p>
-					<!-- محتوای سوالات درک مطلب اینجا قرار می‌گیرد -->
-				</div>
+                <!-- محتوای تب درک مطلب -->
+                <div id="reading" class="tab-content">
+                    <h3>درک مطلب (ریدینگ)</h3>
+                    <p>این بخش برای سوالات درک مطلب خواهد بود.</p>
+                    <!-- محتوای سوالات درک مطلب اینجا قرار می‌گیرد -->
+                </div>
 
-				<!-- محتوای تب وصل کردنی -->
-				<div id="matching" class="tab-content">
-					<h3>سوالات وصل کردنی</h3>
-					<p>این بخش برای سوالات وصل کردنی خواهد بود.</p>
-					<!-- محتوای سوالات وصل کردنی اینجا قرار می‌گیرد -->
-				</div>
-			</div>
+                <!-- محتوای تب وصل کردنی -->
+                <div id="matching" class="tab-content">
+                    <h3>سوالات وصل کردنی</h3>
+                    <p>این بخش برای سوالات وصل کردنی خواهد بود.</p>
+                    <!-- محتوای سوالات وصل کردنی اینجا قرار می‌گیرد -->
+                </div>
+            </div>
 
-			<!-- کارت اطلاعات ثابت سوال -->
-			<div class="card">
-				<h2 class="card-title">اطلاعات پایه سوال</h2>
+            <!-- کارت اطلاعات ثابت سوال -->
+            <form class="card" id="question-info-form">
+                <h2 class="card-title">اطلاعات پایه سوال</h2>
 
-				<div class="form-row">
-					<div class="form-col">
-						<div class="form-group">
-							<label class="form-label">پایه تحصیلی</label>
-							<select class="form-select" id="grade">
-								<option value="">انتخاب پایه</option>
-								<option value="9">نهم</option>
-								<option value="10">دهم</option>
-								<option value="11">یازدهم</option>
-								<option value="12">دوازدهم</option>
-							</select>
-						</div>
-					</div>
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label class="form-label">پایه تحصیلی</label>
+                            <select class="form-select" id="grade">
+                                <option value="">انتخاب پایه</option>
+                                <option value="9">نهم</option>
+                                <option value="10">دهم</option>
+                                <option value="11">یازدهم</option>
+                                <option value="12">دوازدهم</option>
+                            </select>
+                        </div>
+                    </div>
 
-					<div class="form-col">
-						<div class="form-group">
-							<label class="form-label">درس</label>
-							<select class="form-select" id="lesson">
-								<option value="">
-									ابتدا پایه را انتخاب کنید
-								</option>
-							</select>
-						</div>
-					</div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label class="form-label">درس</label>
+                            <select class="form-select" id="lesson">
+                                <option value="">
+                                    ابتدا پایه را انتخاب کنید
+                                </option>
+                            </select>
+                        </div>
+                    </div>
 
-					<div class="form-col">
-						<div class="form-group">
-							<label class="form-label">موضوع</label>
-							<select class="form-select" id="topic">
-								<option value="">انتخاب موضوع</option>
-								<option value="grammar">Grammar</option>
-								<option value="vocab">Vocab</option>
-								<option value="reading">Reading</option>
-								<option value="writing">Writing</option>
-								<option value="listening">Listening</option>
-								<option value="pronunciation">
-									Pronunciation
-								</option>
-							</select>
-						</div>
-					</div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label class="form-label">موضوع</label>
+                            <select class="form-select" id="topic">
+                                <option value="">انتخاب موضوع</option>
+                                <option value="grammar">Grammar</option>
+                                <option value="vocab">Vocab</option>
+                                <option value="reading">Reading</option>
+                                <option value="writing">Writing</option>
+                                <option value="listening">Listening</option>
+                                <option value="pronunciation">
+                                    Pronunciation
+                                </option>
+                            </select>
+                        </div>
+                    </div>
 
-					<div class="form-col">
-						<div class="form-group">
-							<label class="form-label">میزان سختی</label>
-							<select class="form-select" id="difficulty">
-								<option value="">انتخاب سطح سختی</option>
-								<option value="easy">آسان</option>
-								<option value="medium">متوسط</option>
-								<option value="hard">سخت</option>
-							</select>
-						</div>
-					</div>
-				</div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label class="form-label">میزان سختی</label>
+                            <select class="form-select" id="difficulty">
+                                <option value="">انتخاب سطح سختی</option>
+                                <option value="easy">آسان</option>
+                                <option value="medium">متوسط</option>
+                                <option value="hard">سخت</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
 
-				<div class="form-row">
-					<div class="form-col">
-						<div class="form-group">
-							<label class="form-label">نوع سوال</label>
-							<select class="form-select" id="question-type">
-								<option value="compilation">تالیفی</option>
-								<option value="final">نهایی</option>
-							</select>
-						</div>
-					</div>
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label class="form-label">نوع سوال</label>
+                            <select class="form-select" id="question-source">
+                                <option value="compilation">تالیفی</option>
+                                <option value="final">نهایی</option>
+                            </select>
+                        </div>
+                    </div>
 
-					<!-- بخش نهایی دوازدهم -->
+                    <!-- بخش نهایی دوازدهم -->
 
-					<div
-						class="form-col"
-						id="final-12th-year"
-						style="display: none"
-					>
-						<div class="form-group">
-							<label class="form-label">سال سوال</label>
-							<select class="form-select" id="year-12">
-								<option value="">انتخاب سال</option>
-								<!-- سال‌ها توسط جاوااسکریپت پر می‌شوند -->
-							</select>
-						</div>
-					</div>
+                    <div
+                        class="form-col"
+                        id="final-12th-year"
+                        style="display: none">
+                        <div class="form-group">
+                            <label class="form-label">سال سوال</label>
+                            <select class="form-select" id="year-12">
+                                <option value="">انتخاب سال</option>
+                                <!-- سال‌ها توسط جاوااسکریپت پر می‌شوند -->
+                            </select>
+                        </div>
+                    </div>
 
-					<div
-						class="form-col"
-						id="final-12th-month"
-						style="display: none"
-					>
-						<div class="form-group">
-							<label class="form-label">ماه سوال</label>
-							<select class="form-select" id="month-12">
-								<option value="">انتخاب ماه</option>
-								<option value="khordad">خرداد</option>
-								<option value="shahrivar">شهریور</option>
-								<option value="day">دی</option>
-							</select>
-						</div>
-					</div>
-					<!-- بخش نهایی نهم -->
-					<div
-						class="form-col"
-						id="final-9th-year"
-						style="display: none"
-					>
-						<div class="form-group">
-							<label class="form-label">سال سوال</label>
-							<select class="form-select" id="year-9">
-								<option value="">انتخاب سال</option>
-								<!-- سال‌ها توسط جاوااسکریپت پر می‌شوند -->
-							</select>
-						</div>
-					</div>
+                    <div
+                        class="form-col"
+                        id="final-12th-month"
+                        style="display: none">
+                        <div class="form-group">
+                            <label class="form-label">ماه سوال</label>
+                            <select class="form-select" id="month-12">
+                                <option value="">انتخاب ماه</option>
+                                <option value="khordad">خرداد</option>
+                                <option value="shahrivar">شهریور</option>
+                                <option value="day">دی</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- بخش نهایی نهم -->
+                    <div
+                        class="form-col"
+                        id="final-9th-year"
+                        style="display: none">
+                        <div class="form-group">
+                            <label class="form-label">سال سوال</label>
+                            <select class="form-select" id="year-9">
+                                <option value="">انتخاب سال</option>
+                                <!-- سال‌ها توسط جاوااسکریپت پر می‌شوند -->
+                            </select>
+                        </div>
+                    </div>
 
-					<div
-						class="form-col"
-						id="final-9th-province"
-						style="display: none"
-					>
-						<div class="form-group">
-							<label class="form-label">استان سوال</label>
-							<select class="form-select" id="province">
-								<option value="">انتخاب استان</option>
-							</select>
-						</div>
-					</div>
-				</div>
-			</div>
+                    <div
+                        class="form-col"
+                        id="final-9th-province"
+                        style="display: none">
+                        <div class="form-group">
+                            <label class="form-label">استان سوال</label>
+                            <select class="form-select" id="province">
+                                <option value="">انتخاب استان</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </form>
 
-			<!-- دکمه ذخیره -->
-			<button class="btn-primary">
-				<i class="fas fa-save"></i>
-				ذخیره سوال
-			</button>
-		</div>
+            <!-- دکمه ذخیره -->
+            <button class="btn-primary">
+                <i class="fas fa-save"></i>
+                ذخیره سوال
+            </button>
+        </div>
 
-		<script src="../app/app.js"></script>
-	</body>
+        <script src="../app/app.js"></script>
+    </body>
 </html>
