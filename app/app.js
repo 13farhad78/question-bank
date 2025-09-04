@@ -206,13 +206,13 @@ saveBtn.addEventListener("click", async () => {
     const titleInput = document.getElementById("question-title");
     const textInput = document.getElementById("question-text");
     const gradeInput = document.getElementById("grade");
-    const subjectInput = document.getElementById("lesson");
+    const lessonInput = document.getElementById("lesson");
 
     if (
         !titleInput.value ||
         !textInput.value ||
         !gradeInput.value ||
-        !subjectInput.value
+        !lessonInput.value
     ) {
         showToast("لطفاً فیلدهای ضروری را پر کنید.", "error");
         return; // جلوگیری از ارسال درخواست
@@ -223,7 +223,7 @@ saveBtn.addEventListener("click", async () => {
             title: titleInput.value.trim(),
             text: textInput.value.trim(),
             grade: gradeInput.value,
-            subject: subjectInput.value,
+            lesson: lessonInput.value,
             topic: document.getElementById("topic").value,
             difficulty: document.getElementById("difficulty").value,
             questionSource: document.getElementById("question-source").value,

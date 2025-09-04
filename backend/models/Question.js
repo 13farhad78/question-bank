@@ -4,7 +4,7 @@ const questionSchema = new mongoose.Schema({
     title: { type: String, required: true },
     text: { type: String, required: true },
     grade: { type: String },
-    lesson: { type: String },
+    lesson: { type: String, required: true },
     topic: { type: String },
     difficulty: { type: String },
     questionType: { type: String, required: true },
